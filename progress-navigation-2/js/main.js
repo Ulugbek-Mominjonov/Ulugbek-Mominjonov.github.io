@@ -8,7 +8,7 @@ let elSubmitBtn = document.querySelector('.submit');
 
 let contentValue = ["Choose title content", "Choose description content", "Are you happy now?", "Ok we're done. Thanks for sending us your data!"];
 
-elStep1.addEventListener("change", () => {
+elStep1.addEventListener("change", function() {
   if (elStep2.checked === true) {
     this.checked = true;
     this.disabled = true;
@@ -25,7 +25,7 @@ elStep1.addEventListener("change", () => {
   };
 });
 
-elStep2.addEventListener("change", () => {
+elStep2.addEventListener("change", function() {
   if (elStep3.checked === true) {
       this.checked = true;
       elStep3.checked = false;
@@ -46,7 +46,7 @@ elStep2.addEventListener("change", () => {
   };
 });
 
-elStep3.addEventListener("change", () => {
+elStep3.addEventListener("change", function() {
   if (this.checked === true) {
       this.disabled = true;
       elStep2.disabled = false;
@@ -58,7 +58,7 @@ elStep3.addEventListener("change", () => {
   };
 });
 
-elSubmitBtn.addEventListener("click", () => {
+elSubmitBtn.addEventListener("click", function() {
   if (elStep2.checked !== true) {
       elStep2.checked = true;
       elStep2.disabled = true;
@@ -82,7 +82,7 @@ elSubmitBtn.addEventListener("click", () => {
   };
 });
 
-elBackBtn.addEventListener("click", () => {
+elBackBtn.addEventListener("click", function() {
   if (elStep2.checked === true && elStep3.checked !== true) {
       elStep2.checked = false;
       elStep2.disabled = false;
